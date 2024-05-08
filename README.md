@@ -32,7 +32,7 @@ Make sure you have the following installed:
 3. **Alternatively, if you can run npm script:**:
   - 
      ```
-     ng serve
+     npm run start
      ```
 
 By running these two commands, you are setting up both the backend and frontend parts of the application. Ensure json-server is running before you start the Angular app to avoid any connectivity issues.
