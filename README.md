@@ -1,5 +1,8 @@
 # Todo Application
 
+<img width="1034" alt="image" src="https://github.com/AregSargsyan/todo-list-app/assets/48319020/a8a66916-dffb-4ef7-aa36-9198c7198193">
+
+
 ## Description
 This todo application is built using Angular and json-server to simulate a full-stack environment. The application allows users to manage their tasks effectively with features such as adding new tasks, moving tasks between different statuses, and deleting tasks. It leverages drag-and-drop functionality for easy task management and provides a real-time search capability.
 
