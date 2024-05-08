@@ -1,0 +1,13 @@
+<div class="task-item" matTooltip="Title: {{ task.title }}, Description: {{task.description ? task.description : 'N/A' }}">
+  <span>{{ task.title }}</span>
+  <div class="task-icons">
+    <mat-icon color="warn" (click)="deleteTask()"  matTooltip="Delete Task">close</mat-icon>
+    @if (task.status === TaskStatus.InProgress) {
+      <mat-icon style="color: #ff9800;" (click)="editTaskStatus(TaskStatus.Postponed)" matTooltip="Postpone Task">pause</mat-icon>
+    }
+
+    @if (task.status === TaskStatus.InProgress || task.status === TaskStatus.Postponed) {
+      <mat-icon style="color: #2196f3;"(click)="editTaskStatus(TaskStatus.Completed)" matTooltip="Complete Task">check</mat-icon>
+    }
+  </div>
+</div>

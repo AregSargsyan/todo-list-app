@@ -1,0 +1,11 @@
+div {
+  display: flex;
+  justify-content: space-between;
+
+  span {
+    font-weight: bold;
+    font-size: 24px;
+    font-variant: small-caps;
+    color: rgb(63, 63, 63);
+  }
+}

@@ -1,0 +1,5 @@
+<mat-form-field class="example-form-field">
+  <mat-label>Search Tasks</mat-label>
+  <input matInput #searchQuery type="text" (input)="onSearchUpdated(searchQuery.value)">
+  <mat-icon matSuffix>search</mat-icon>
+</mat-form-field>

@@ -1,0 +1,12 @@
+:host {
+  width: 960px;
+
+  .action-buttons {
+    margin: 30px;
+
+    &>button {
+      margin: 10px;
+      padding: 10px 30px;
+    }
+  }
+}

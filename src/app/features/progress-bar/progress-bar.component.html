@@ -1,0 +1,17 @@
+<div class="progress-container">
+  @if(inprogressTasks.length + postponedTasks.length + completedTasks.length > 0) {
+  <div class="progress-segment in-progress" [style.width.%]="inProgressPercentage"
+    matTooltip="{{ inprogressTasks.length }} tasks in progress" [matTooltipClass]="'tooltip-in-progress'">
+  </div>
+
+  <div class="progress-segment postponed" [style.width.%]="postponedPercentage"
+    matTooltip="{{ postponedTasks.length }} tasks postponed" [matTooltipClass]="'tooltip-postponed'">
+  </div>
+
+  <div class="progress-segment completed" [style.width.%]="100 - inProgressPercentage - postponedPercentage"
+    matTooltip="{{ completedTasks.length }} tasks completed" [matTooltipClass]="'tooltip-completed'">
+  </div>
+  } @else {
+  <div class="progress-segment no-data" matTooltip="No tasks available"></div>
+  }
+</div>

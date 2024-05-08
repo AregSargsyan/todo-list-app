@@ -1,0 +1,63 @@
+<app-todo-header />
+
+<app-progress-bar [inprogressTasks]="inprogressTasks()" [postponedTasks]="postponedTasks()"
+  [completedTasks]="completedTasks()"></app-progress-bar>
+
+<div class="action-buttons">
+  <button mat-raised-button color="primary" (click)="openCreateTaskDialog()">Create Task</button>
+  <button mat-raised-button color="primary" (click)="deleteAllTasks()">Reset List</button>
+</div>
+
+<app-search-tasks (onTaskSearch$)="getAllTasks($event)" />
+
+<mat-accordion multi cdkDropListGroup>
+  <div class="panel" cdkDropList [cdkDropListData]="inprogressTasks()" cdkDropListSortingDisabled>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title> InProgress ({{inprogressTasks().length}}) </mat-panel-title>
+      </mat-expansion-panel-header>
+      @for (task of inprogressTasks(); track task.id) {
+      <app-task-item
+        [task]="task" cdkDrag
+        [cdkDragData]="task"
+        (onTaskStatusChanged$)="updateTask(task,$event)"
+        (onTaskDeleted$)="onTaskDeleted(task)">
+      </app-task-item>
+      }
+    </mat-expansion-panel>
+  </div>
+
+  <div class="panel" cdkDropList [cdkDropListData]="postponedTasks()" cdkDropListSortingDisabled
+    (cdkDropListDropped)="dropTask($event, TaskStatus.Postponed)">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title> Do Later ({{postponedTasks().length}}) </mat-panel-title>
+      </mat-expansion-panel-header>
+      @for (task of postponedTasks(); track task.id) {
+      <app-task-item
+       [task]="task" cdkDrag
+       [cdkDragData]="task"
+       (onTaskStatusChanged$)="updateTask(task,$event)"
+       (onTaskDeleted$)="onTaskDeleted(task)">
+      </app-task-item>
+      }
+    </mat-expansion-panel>
+  </div>
+
+  <div class="panel" cdkDropList [cdkDropListData]="completedTasks()" cdkDropListSortingDisabled
+    (cdkDropListDropped)="dropTask($event, TaskStatus.Completed)">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title> Completed ({{completedTasks().length}})</mat-panel-title>
+      </mat-expansion-panel-header>
+      @for (task of completedTasks(); track task.id) {
+      <app-task-item
+        [task]="task" cdkDrag
+        [cdkDragData]="task"
+        (onTaskStatusChanged$)="updateTask(task,$event)"
+        (onTaskDeleted$)="onTaskDeleted(task)">
+      </app-task-item>
+      }
+    </mat-expansion-panel>
+  </div>
+</mat-accordion>

@@ -1,0 +1,30 @@
+.progress-container {
+  display: flex;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 24px;
+  margin: 10px 0;
+
+  .progress-segment {
+    height: 100%;
+    transition: width 0.3s ease-in-out;
+
+    &.in-progress {
+      background-color: #4caf50;
+    }
+
+    &.postponed {
+      background-color: #ff9800;
+    }
+
+    &.completed {
+      background-color: #2196f3;
+    }
+
+    &.no-data {
+      background-color: gray;
+      width: 100%;
+    }
+  }
+}

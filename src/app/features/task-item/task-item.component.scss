@@ -1,0 +1,19 @@
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.task-icons {
+  display: flex;
+  gap: 8px;
+}
+
+mat-icon {
+  cursor: pointer;
+}
