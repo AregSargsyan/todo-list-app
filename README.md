@@ -27,11 +27,13 @@ Make sure you have the following installed:
      ```
      ng serve
      ```
-   - Alternatively, if you have a specific npm script set up, you can run:
-     ```
-     npm run start
-     ```
    - This will serve the app on `http://localhost:4200`.
+
+3. **Alternatively, if you can run npm script:**:
+  - 
+     ```
+     ng serve
+     ```
 
 By running these two commands, you are setting up both the backend and frontend parts of the application. Ensure json-server is running before you start the Angular app to avoid any connectivity issues.
 
@@ -41,13 +43,13 @@ By running these two commands, you are setting up both the backend and frontend 
 
 - **Task Categorization**: Tasks can be easily moved between different statuses—postponed, in-progress, or completed—via intuitive drag-and-drop functionality. This helps in effectively managing the lifecycle of each task.
 
-- **Restrictions on Task Movement**: According to the predefined requirements, once tasks are moved to the postponed or completed status, they cannot be moved back to in-progress. This ensures that tasks follow a logical progression towards completion.
+- **Restrictions on Task Movement**: According to the predefined requirements, once tasks are moved to the postponed or completed status, they cannot be moved back to in-progress.
 
 - **Search Functionality**: The application includes a search feature that allows users to find tasks by title. This search checks for full equality, ensuring precise and direct results.
 
 - **Bulk Delete Option**: Users have the capability to delete all tasks at once through a dedicated button, making it simple to clear the task list when needed.
 
-- **Progress Visualization**: A progress bar visually represents the distribution of tasks across different statuses, offering a quick overview of personal or team productivity.
+- **Progress Visualization**: A progress bar visually represents the distribution of tasks across different statuses.
 
 - **Enhanced Tooltips**: Each task and the progress bar feature tooltips that provide a brief description or status information, enhancing the user experience by making the application more informative and interactive.
 
@@ -57,7 +59,7 @@ This Todo application leverages modern web development practices and technologie
 
 ### Framework and Version
 
-- **Angular 17**: The application is built using Angular 17, the latest version of the popular web application framework. This version brings performance improvements, better developer ergonomics, and more robust type-checking.
+- **Angular 17**: The application is built using Angular 17, the latest version of the Angular framework. 
 
 ### Architecture
 
