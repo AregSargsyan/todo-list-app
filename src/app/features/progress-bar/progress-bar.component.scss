@@ -1,6 +1,7 @@
+@import "../../../palette";
+
 .progress-container {
   display: flex;
-  background-color: #f3f3f3;
   border-radius: 8px;
   overflow: hidden;
   height: 24px;
@@ -11,19 +12,19 @@
     transition: width 0.3s ease-in-out;
 
     &.in-progress {
-      background-color: #4caf50;
+      background-color: $green;
     }
 
     &.postponed {
-      background-color: #ff9800;
+      background-color: $orange;
     }
 
     &.completed {
-      background-color: #2196f3;
+      background-color: $blue;
     }
 
     &.no-data {
-      background-color: gray;
+      background-color: $gray;
       width: 100%;
     }
   }

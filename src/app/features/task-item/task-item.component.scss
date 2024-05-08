@@ -1,10 +1,12 @@
+@import "../../../palette";
+
 .task-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px 16px;
-  background-color: #333;
-  color: #fff;
+  background-color: $dark-grey;
+  color: $white;
   border-radius: 4px;
   margin-bottom: 8px;
 }
